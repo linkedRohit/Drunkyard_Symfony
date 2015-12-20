@@ -1,0 +1,7 @@
+social_drunken_homepage:
+    pattern:  /
+    defaults: { _controller: SocialDrunkenBundle:Default:index }
+
+api_auth_authenticate:
+    pattern:  /auth
+    defaults: { _controller: SocialDrunkenBundle:Auth:authenticate }

@@ -1,0 +1,3 @@
+social_drunken:
+    resource: "@SocialDrunkenBundle/Resources/config/routing.yml"
+    prefix:   /

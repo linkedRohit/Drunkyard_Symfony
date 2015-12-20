@@ -1,0 +1,23 @@
+parameters:
+    jauth_user_provider.class: ThirdParty\JAuthenticationBundle\User\JUserProvider
+
+services:
+    jauth_user_provider:
+        class: "%jauth_user_provider.class%"
+
+    jauth.security.authentication.provider:
+        class:  ThirdParty\JAuthenticationBundle\Authentication\Provider\JAuthenticationProvider
+        arguments: ["", "%kernel.cache_dir%/security/nonces", "@role_provider", "", ""]
+#        tags:
+#            - { name: kernel.security_listener, priority: -10 }  ## this is how to set priority
+
+    jauth.security.authentication.listener:
+        class:  ThirdParty\JAuthenticationBundle\Firewall\JAuthenticationListener
+        arguments: ["@security.context", "@security.authentication.manager"]
+
+    authUtil:
+        class: ThirdParty\JAuthenticationBundle\Util\AuthenticationUtil
+        arguments: ["@security.context"]
+
+
+

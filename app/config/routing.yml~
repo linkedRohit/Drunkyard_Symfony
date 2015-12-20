@@ -1,0 +1,17 @@
+naukri_user_registration:
+    resource: "@NaukriUserRegistrationBundle/Resources/config/routing.yml"
+    prefix:   /
+
+user_registration:
+    resource: "@UserRegistrationBundle/Resources/config/routing.yml"
+    prefix:   /
+
+naukri_test_test:
+    resource: "@NaukriTestTestBundle/Resources/config/routing.yml"
+    prefix:   /
+
+NaukriUserBundle:
+        resource: "@NaukriUserBundle/Resources/config/routing.yml"
+        prefix:   /
+
+

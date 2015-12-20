@@ -1,0 +1,7 @@
+parameters:
+#    social_drunken.example.class: Social\DrunkenBundle\Example
+
+services:
+#    social_drunken.example:
+#        class: %social_drunken.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

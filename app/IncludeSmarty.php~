@@ -1,0 +1,14 @@
+<?php
+echo 'starting';
+   define('SMARTY_DIR', '/PHP_Packages/Smarty/');#/Ressources/Smarty-2.6.18/libs/
+echo 'starting';die;
+	require_once(SMARTY_DIR.'Smarty.class.php');
+	$smarty = new Smarty();
+
+	$smarty->template_dir = '/app/Smarty_Templates/templates/';
+	$smarty->compile_dir  = '/app/Smarty_Templates/templates_c/';
+	$smarty->config_dir   = '/app/Smarty_Templates/configs/';
+	$smarty->cache_dir    = '/app/Smarty_Templates/cache/';
+
+  
+?>
